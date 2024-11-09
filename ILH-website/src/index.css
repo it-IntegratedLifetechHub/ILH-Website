@@ -29,7 +29,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 0.5rem;
+  width: .5rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -37,9 +37,8 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #072f62;
-  border-radius: 1rem;
-  outline: 1px solid #072f62;
+  background-color: #491F1A;
+  outline: 1px solid #491F1A;
 }
 
 ul {
@@ -269,4 +268,89 @@ a {
     align-items: center;
     column-gap: 6.5rem;
   }
+}
+
+
+
+
+
+.homepage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  position: relative;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: change 25s infinite ease-in-out;
+}
+
+
+/* Additional styles for smaller devices */
+@media screen and (max-width: 768px) {
+  .homepage {
+    background-position: center;
+    /* Adjusts positioning on smaller screens */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .homepage {
+    height: calc(100vh - 3.5rem);
+    /* Adjust for header height if applicable */
+  }
+}
+
+
+
+/* Keyframes for background image animation */
+@keyframes change {
+  0% {
+    background-image: url("/src/assets/heroimg1.png");
+  }
+
+  20% {
+    background-image: url("/src/assets/heroimg2.png");
+  }
+
+  40% {
+    background-image: url("/src/assets/heroimg3.png");
+  }
+
+  60% {
+    background-image: url("/src/assets/heroimg4.png");
+  }
+
+  80% {
+    background-image: url("/src/assets/heroimg5.png");
+  }
+
+  100% {
+    background-image: url("/src/assets/heroimg6.png");
+  }
+}
+
+.hero-content {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.hero-image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Place image behind the content */
 }
