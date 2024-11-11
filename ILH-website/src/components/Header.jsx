@@ -82,7 +82,7 @@ const ResponsiveNavbar = () => {
                 onClick={handleCloseMenu}
               >
                 <RiArrowRightUpLine />
-                <span>Products</span>
+                <span>Our Division</span>
               </Link>
             </li>
 

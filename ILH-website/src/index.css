@@ -287,25 +287,23 @@ a {
   animation: change 25s infinite ease-in-out;
 }
 
-
 /* Additional styles for smaller devices */
 @media screen and (max-width: 768px) {
   .homepage {
+    animation: mobchange 25s infinite ease-in-out;
     background-position: center;
-    /* Adjusts positioning on smaller screens */
   }
 }
 
 @media screen and (min-width: 1024px) {
   .homepage {
     height: calc(100vh - 3.5rem);
-    /* Adjust for header height if applicable */
   }
 }
 
 
 
-/* Keyframes for background image animation */
+/* Keyframes for desktop background image animation */
 @keyframes change {
   0% {
     background-image: url("/src/assets/heroimg1.png");
@@ -329,6 +327,33 @@ a {
 
   100% {
     background-image: url("/src/assets/heroimg6.png");
+  }
+}
+
+/* Keyframes for mobile background image animation */
+@keyframes mobchange {
+  0% {
+    background-image: url("/src/assets/mobimg1.png");
+  }
+
+  20% {
+    background-image: url("/src/assets/mobimg2.png");
+  }
+
+  40% {
+    background-image: url("/src/assets/mobimg3.png");
+  }
+
+  60% {
+    background-image: url("/src/assets/mobimg4.png");
+  }
+
+  80% {
+    background-image: url("/src/assets/mobimg5.png");
+  }
+
+  100% {
+    background-image: url("/src/assets/mobimg6.png");
   }
 }
 
