@@ -24,8 +24,8 @@ body {
 }
 
 *::selection {
-  background: #dc3545;
-  color: #072f62;
+  background: #491F1A;
+  color: #70c600;
 }
 
 body::-webkit-scrollbar {
@@ -273,12 +273,12 @@ a {
 
 
 
-
 .homepage {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: center;
+  /* Center content horizontally */
   position: relative;
   overflow: hidden;
   background-position: center;
@@ -287,21 +287,19 @@ a {
   animation: change 25s infinite ease-in-out;
 }
 
-/* Additional styles for smaller devices */
+/* Use the mobile animation for screens 768px or smaller */
 @media screen and (max-width: 768px) {
   .homepage {
     animation: mobchange 25s infinite ease-in-out;
-    background-position: center;
   }
 }
 
+/* Adjust height for large screens to account for header height */
 @media screen and (min-width: 1024px) {
   .homepage {
     height: calc(100vh - 3.5rem);
   }
 }
-
-
 
 /* Keyframes for desktop background image animation */
 @keyframes change {
@@ -361,21 +359,81 @@ a {
   min-height: 100vh;
   width: 100vw;
   display: flex;
-  justify-content: flex-end;
+  align-items: right;
+  /* Center content vertically */
+  justify-content: center;
+  /* Center content horizontally */
+  flex-direction: column;
+  /* Stack title and subtitle */
+  text-align: right;
   position: relative;
-  overflow: hidden;
+  z-index: 1;
+  /* Place content above background */
+  color: white;
+  padding: 1rem;
 }
 
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+/* Styling adjustments for larger screens */
+@media screen and (min-width: 1024px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.75rem;
+  }
+}
+
+.hero-divider {
+  border: none;
+  height: 2px;
+  background-color: #fff;
+  /* Gradient color for a modern look */
+  width: 50%;
+  /* Center the divider with spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Optional: adds shadow for depth */
+  margin-left: auto;
+  margin-right: 0;
+}
 
 .hero-image {
-  flex: 1;
-  background-size: cover;
-  background-position: center;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background-size: cover;
+  background-position: center;
   z-index: -1;
-  /* Place image behind the content */
+  /* Place image behind content */
+}
+
+
+
+
+.about-section {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  padding: 40px 20px;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
