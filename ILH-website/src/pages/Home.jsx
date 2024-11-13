@@ -91,6 +91,14 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <div className="tagline">
+        <h1>
+          <span class="highlight-brown">Bhu-Samriddhi</span>,{" "}
+          <span class="highlight-green">Jeevan-Unnati</span>
+        </h1>
+        <h2>Brown Revolution</h2>
+      </div>
     </>
   );
 };
