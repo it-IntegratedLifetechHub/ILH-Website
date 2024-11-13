@@ -3,8 +3,8 @@ import aboutus from "../assets/aboutus.png";
 import agriculture from "../assets/business1.png";
 import advisory from "../assets/business2.png";
 import finance from "../assets/business3.png";
-import food from "../assets/business3.png";
-import warehousing from "../assets/business3.png";
+import food from "../assets/business4.png";
+import warehousing from "../assets/business5.png";
 
 const Home = () => {
   return (
@@ -71,6 +71,23 @@ const Home = () => {
                 <img src={card.imgSrc} alt={card.title} />
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="contact">
+        <div className="contact-bgbox">
+          <h1 className="contact-subtitle">
+            Integrated Lifetech Hub India Pvt. Ltd.
+          </h1>
+          <h1 className="contact-title">Our Division</h1>
+          <span className="bottom-dot">•••</span>
+
+          <div className="contact-form">
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="tel" placeholder="Phone No." />
+            <button type="submit">SUBMIT HERE</button>
           </div>
         </div>
       </div>

@@ -15,7 +15,7 @@ html {
 }
 
 ::placeholder {
-  font-family: "Cinzel", serif;
+  font-family: "Alata", sans-serif;
   color: #072f62;
 }
 
@@ -551,7 +551,7 @@ a {
   flex-direction: column;
 }
 
-.business-title {
+.business-subtitle {
   font-size: 2.5rem;
   font-weight: 700;
   color: #491F1A;
@@ -630,5 +630,103 @@ a {
 
   .bcard {
     width: 250px;
+  }
+}
+
+
+
+
+.contact {
+  min-height: 65vh;
+  background-image: url(assets/Contact.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-bgbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  flex-direction: column;
+}
+
+
+.contact-subtitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0.5rem 0;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0.5rem 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* Controls spacing between title and dots */
+}
+
+
+.contact-form {
+  background: rgba(102, 102, 102, 50%);
+  position: relative;
+  padding: 4rem 1rem 4rem 1rem;
+  /* margin: 2rem 1rem 2.5rem; */
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form input,
+.contact-form button {
+  padding: 15px;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+}
+
+.contact-form input::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+
+.contact-form button {
+  background-color: #3f5c08;
+  /* Green color for button */
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.contact-form button:hover {
+  background-color: #45a049;
+}
+
+@media screen and (min-width: 1024px) {
+  .contact-title {
+    font-size: 3.5rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1.75rem;
   }
 }
