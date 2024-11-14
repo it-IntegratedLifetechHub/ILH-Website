@@ -31,28 +31,24 @@ function Footer() {
               <hr />
               <ul>
                 <li>
-                  <i className="ri-arrow-right-s-line"></i>
                   <a href="/" className="footer-desc">
                     <IoIosArrowForward />
                     Home
                   </a>
                 </li>
                 <li>
-                  <i className="ri-arrow-right-s-line"></i>
                   <a href="#aboutus" className="footer-desc">
                     <IoIosArrowForward />
                     About Us
                   </a>
                 </li>
                 <li>
-                  <i className="ri-arrow-right-s-line"></i>
                   <a href="#projects" className="footer-desc">
                     <IoIosArrowForward />
                     Our Projects
                   </a>
                 </li>
                 <li>
-                  <i className="ri-arrow-right-s-line"></i>
                   <a href="#contact-form" className="footer-desc">
                     <IoIosArrowForward />
                     Contact
