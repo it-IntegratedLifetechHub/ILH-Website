@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/ILHlogo.png";
+import logo from "../assets/ILHLogo.png";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaLinkedin, FaFacebookSquare } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
