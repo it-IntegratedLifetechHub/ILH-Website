@@ -53,7 +53,7 @@ const ResponsiveNavbar = () => {
             <li className="nav__item">
               <Link
                 smooth
-                to="/#home"
+                to="/"
                 className="nav__link"
                 onClick={handleCloseMenu}
               >
@@ -65,7 +65,7 @@ const ResponsiveNavbar = () => {
             <li className="nav__item">
               <Link
                 smooth
-                to="/#about"
+                to="/about-us"
                 className="nav__link"
                 onClick={handleCloseMenu}
               >

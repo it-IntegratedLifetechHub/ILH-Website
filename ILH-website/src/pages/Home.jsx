@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import aboutus from "../assets/aboutus.png";
 import agriculture from "../assets/business1.png";
 import advisory from "../assets/business2.png";
@@ -45,7 +46,9 @@ const Home = () => {
               animi maiores laudantium libero dolore ratione autem. Totam est
             </p>
             <div>
-              <button className="about-button">Know More</button>
+              <Link to="/about-us">
+                <button className="about-button">Know More</button>
+              </Link>
             </div>
           </div>
         </div>

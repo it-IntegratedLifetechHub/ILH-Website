@@ -272,9 +272,6 @@ a {
   }
 }
 
-
-
-
 .homepage {
   min-height: 100vh;
   display: flex;
@@ -659,16 +656,17 @@ a {
   flex-direction: column;
 }
 
-
 .contact-subtitle {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  /* Default for smaller screens */
   font-weight: 700;
   color: #fff;
   margin: 0.5rem 0;
 }
 
 .contact-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  /* Default for smaller screens */
   font-weight: 700;
   color: #fff;
   margin: 0.5rem 0;
@@ -677,7 +675,6 @@ a {
   gap: 0.5rem;
   /* Controls spacing between title and dots */
 }
-
 
 .contact-form {
   background: rgba(102, 102, 102, 50%);
@@ -721,6 +718,18 @@ a {
   background-color: #45a049;
 }
 
+/* Medium screens (e.g., tablets) */
+@media screen and (min-width: 768px) {
+  .contact-title {
+    font-size: 2.75rem;
+  }
+
+  .contact-subtitle {
+    font-size: 2rem;
+  }
+}
+
+/* Large screens (e.g., desktops) */
 @media screen and (min-width: 1024px) {
   .contact-title {
     font-size: 3.5rem;
@@ -728,6 +737,17 @@ a {
 
   .contact-subtitle {
     font-size: 1.75rem;
+  }
+}
+
+/* Extra-large screens (e.g., widescreens) */
+@media screen and (min-width: 1440px) {
+  .contact-title {
+    font-size: 4rem;
+  }
+
+  .contact-subtitle {
+    font-size: 2rem;
   }
 }
 
@@ -929,7 +949,7 @@ a {
   }
 
   .footer-logo {
-    width: 120px;
+    width: 227px;
   }
 
   .footer-map iframe {

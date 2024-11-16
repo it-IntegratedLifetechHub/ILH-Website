@@ -1,0 +1,191 @@
+/* About Page Styling */
+.about-page {
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1rem;
+    /* Responsive padding */
+    gap: 1.5rem;
+    /* Space between elements */
+    margin: 0 auto;
+    /* Center the content */
+    max-width: 1200px;
+    /* Limit the width for larger screens */
+}
+
+/* Tagline Image Styling */
+.tagline-img {
+    max-width: 115%;
+    /* Scales well on smaller screens */
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+/* About Text Container */
+.about-text {
+    display: flex;
+    flex-direction: column;
+    /* Stack title and description */
+    align-items: center;
+}
+
+/* About Page Title Styling */
+.about-page-title {
+    font-family: "Metal", serif;
+    /* Elegant font */
+    font-size: 3rem;
+    /* Adjusted for responsiveness */
+    font-weight: 300;
+    /* Bold styling */
+    color: #491F1A;
+    /* Matches your theme */
+    margin: 0;
+}
+
+/* About Page Description Styling */
+.about-page-description {
+    font-family: Alata, sans-serif;
+    font-size: 1rem;
+    /* Default font size */
+    color: #333;
+    /* Neutral text color */
+    line-height: 1.6;
+    /* Better spacing */
+    max-width: 800px;
+    /* Constrain text for readability */
+    margin: 0 auto;
+    /* Center text block */
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 1024px) {
+    .about-page {
+        flex-direction: row;
+        /* Image and text side by side */
+        align-items: flex-center;
+        /* Align items to the top */
+        gap: 3rem;
+        text-align: left;
+        /* Align text to the left */
+    }
+
+    .tagline-img {
+        max-width: 50%;
+        /* Resize image for desktop */
+        margin: 0;
+        /* Remove bottom margin in row layout */
+    }
+
+    .about-text {
+        align-items: flex-start;
+        /* Align text items to the left */
+    }
+
+    .about-page-title {
+        font-size: 4rem;
+        /* Larger text for desktop */
+    }
+
+    .about-page-description {
+        font-size: 1.25rem;
+        /* Larger text */
+        margin-top: 0.5rem;
+        /* Add some space below the title */
+    }
+}
+
+/* Container */
+.vision-mission-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #272727;
+    color: #fff;
+    padding: 2rem;
+    max-width: 100%;
+}
+
+/* Switch Container */
+.switch-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Switch Label */
+.switch-label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+
+    color: #000;
+    top: 0.2rem;
+    left: 0.2rem;
+    width: 9.6rem;
+    height: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+}
+
+.switch-label.active {
+    color: #000;
+    background-color: #fff;
+    top: 0.2rem;
+    left: 0.2rem;
+    width: 9.6rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+}
+
+/* Switch */
+.switch {
+    position: relative;
+    width: 21rem;
+    height: 3.5rem;
+    background-color: #d9d9d9;
+    border-radius: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.2rem;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Switch Slider */
+.switch-slider {
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+    width: 5.6rem;
+    height: 2.6rem;
+
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+}
+
+.switch-slider.right {
+    transform: translateX(10rem);
+}
+
+/* Content */
+.content {
+    font-family: Alata, sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
