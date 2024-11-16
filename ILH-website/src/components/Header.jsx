@@ -77,19 +77,19 @@ const ResponsiveNavbar = () => {
             <li className="nav__item">
               <Link
                 smooth
-                to="/#products"
+                to="/our-divisions"
                 className="nav__link"
                 onClick={handleCloseMenu}
               >
                 <RiArrowRightUpLine />
-                <span>Our Division</span>
+                <span>Our Divisions</span>
               </Link>
             </li>
 
             <li className="nav__item">
               <Link
                 smooth
-                to="/#contact"
+                to="/contact"
                 className="nav__link"
                 onClick={handleCloseMenu}
               >

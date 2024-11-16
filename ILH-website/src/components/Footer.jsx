@@ -37,19 +37,19 @@ function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#aboutus" className="footer-desc">
+                  <a href="/about-us" className="footer-desc">
                     <IoIosArrowForward />
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#projects" className="footer-desc">
+                  <a href="/our-divisions" className="footer-desc">
                     <IoIosArrowForward />
-                    Our Projects
+                    Our Divisions
                   </a>
                 </li>
                 <li>
-                  <a href="#contact-form" className="footer-desc">
+                  <a href="/contact" className="footer-desc">
                     <IoIosArrowForward />
                     Contact
                   </a>
