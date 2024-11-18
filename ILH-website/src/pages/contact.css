@@ -1,0 +1,181 @@
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 6rem 1rem;
+    gap: 1.5rem;
+    margin: 0 auto;
+}
+
+.contact-us {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+
+.contact-form-section {
+    flex: 1;
+    max-width: 45%;
+    color: #491F1A;
+}
+
+.contact-form-section h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.contact-form-section h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.contact-form-section p {
+    font-family: Alata, sans-serif;
+    margin-bottom: 20px;
+    color: #3f5c08;
+}
+
+.contact-page-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input {
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    width: 100%;
+    /* Ensures inputs take full width */
+    max-width: 100%;
+    /* Prevents overflowing */
+    box-sizing: border-box;
+    /* Includes padding and border in width */
+}
+
+.form-group #name {
+    max-width: 100%;
+    /* Adjusts name field width for smaller screens */
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    /* Allows wrapping on smaller screens */
+}
+
+.form-row .form-group {
+    flex: 1;
+    min-width: calc(50% - 10px);
+    /* Ensures 2 columns on larger screens */
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #3f5c08;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: start;
+}
+
+button:hover {
+    background-color: #223004;
+}
+
+.contact-info-section {
+    flex: 1;
+    max-width: 45%;
+    text-align: left;
+}
+
+.map {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.contact-details h3 {
+    color: #491F1A;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.contact-details p {
+    font-family: Alata, sans-serif;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #3f5c08;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-us {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-form-section,
+    .contact-info-section {
+        max-width: 100%;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+        /* Adds spacing between stacked fields */
+    }
+
+    button {
+        width: 100%;
+        align-self: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form-section h2 {
+        font-size: 22px;
+    }
+
+    .form-group input {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .form-group label {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    .map {
+        height: 250px;
+    }
+}

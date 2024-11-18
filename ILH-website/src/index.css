@@ -14,10 +14,6 @@ html {
   scroll-behavior: smooth;
 }
 
-::placeholder {
-  font-family: "Alata", sans-serif;
-  color: #072f62;
-}
 
 body {
   font-family: "Cinzel", serif;
