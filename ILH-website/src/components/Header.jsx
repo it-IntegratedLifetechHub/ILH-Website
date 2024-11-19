@@ -77,7 +77,7 @@ const ResponsiveNavbar = () => {
             <li className="nav__item">
               <Link
                 smooth
-                to="/our-divisions"
+                to="/our-division"
                 className="nav__link"
                 onClick={handleCloseMenu}
               >
