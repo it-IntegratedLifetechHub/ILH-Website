@@ -1,23 +1,37 @@
 [
   {
     "id": 1,
-    "title": "Business 1",
+    "title": "Agriclture",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, porro quibusdam reiciendis modi sed impedit recusandae in tenetur animi maiores laudantium libero dolore ratione autem. Totam est earum excepturi placeat.",
-    "image": "./src/assets/aboutus.png",
+    "image": "./src/assets/agriculture.png",
     "link": "/about-us"
   },
   {
     "id": 2,
-    "title": "Business 2",
+    "title": "Advisory",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, porro quibusdam reiciendis modi sed impedit recusandae in tenetur animi maiores laudantium libero dolore ratione autem. Totam est earum excepturi placeat.",
-    "image": "./src/assets/aboutus.png",
+    "image": "./src/assets/advisory.png",
     "link": "/about-us"
   },
   {
     "id": 3,
-    "title": "Business 3",
+    "title": "Finance",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, porro quibusdam reiciendis modi sed impedit recusandae in tenetur animi maiores laudantium libero dolore ratione autem. Totam est earum excepturi placeat.",
-    "image": "./src/assets/aboutus.png",
+    "image": "./src/assets/finance.png",
+    "link": "/about-us"
+  },
+  {
+    "id": 4,
+    "title": "Food Processing",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, porro quibusdam reiciendis modi sed impedit recusandae in tenetur animi maiores laudantium libero dolore ratione autem. Totam est earum excepturi placeat.",
+    "image": "./src/assets/foodprocessing.png",
+    "link": "/about-us"
+  },
+  {
+    "id": 5,
+    "title": "Warehousing",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, porro quibusdam reiciendis modi sed impedit recusandae in tenetur animi maiores laudantium libero dolore ratione autem. Totam est earum excepturi placeat.",
+    "image": "./src/assets/warehousing.png",
     "link": "/about-us"
   }
 ]

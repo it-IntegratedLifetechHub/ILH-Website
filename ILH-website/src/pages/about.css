@@ -18,7 +18,7 @@
 
 /* Tagline Image Styling */
 .tagline-img {
-    max-width: 115%;
+    max-width: 111%;
     /* Scales well on smaller screens */
     height: auto;
     object-fit: contain;
@@ -104,88 +104,98 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #272727;
-    color: #fff;
+    background-color: #1f1f1f;
+    color: #ffffff;
     padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     max-width: 100%;
 }
 
 /* Switch Container */
 .switch-container {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    justify-content: center;
+    width: 100%;
     margin-bottom: 2rem;
-}
-
-/* Switch Label */
-.switch-label {
-    font-size: 1.5rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
-
-    color: #000;
-    top: 0.2rem;
-    left: 0.2rem;
-    width: 9.6rem;
-    height: 2.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 40px;
-}
-
-.switch-label.active {
-    color: #000;
-    background-color: #fff;
-    top: 0.2rem;
-    left: 0.2rem;
-    width: 9.6rem;
-    height: 3.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 40px;
 }
 
 /* Switch */
 .switch {
     position: relative;
-    width: 21rem;
+    width: 20rem;
     height: 3.5rem;
-    background-color: #d9d9d9;
-    border-radius: 40px;
+    background-color: #e0e0e0;
+    border-radius: 50px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 0.2rem;
+    padding: 0.5rem;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
 
+/* Switch Label */
+.switch-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    flex: 1;
+    text-align: center;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.switch-label.active {
+    color: #ffffff;
+}
 
 /* Switch Slider */
 .switch-slider {
     position: absolute;
-    top: 0.2rem;
-    left: 0.2rem;
-    width: 5.6rem;
-    height: 2.6rem;
-
-    border-radius: 12px;
+    top: 0.25rem;
+    left: 0.25rem;
+    width: 10rem;
+    height: 3rem;
+    background-color: #70c600;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    transform: translateX(0);
 }
 
 .switch-slider.right {
-    transform: translateX(10rem);
+    transform: translateX(9.5rem);
 }
 
 /* Content */
 .content {
-    font-family: Alata, sans-serif;
+    font-family: "Alata", sans-serif;
     text-align: center;
-    font-size: 1rem;
-    line-height: 1.6;
-    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 100%;
+    padding: 1rem;
+    color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    .vision-mission-container {
+        padding: 1.5rem;
+    }
+
+    .switch {
+        width: 16.5rem;
+        height: 3rem;
+    }
+
+    .switch-slider {
+        width: 8rem;
+        height: 2.6rem;
+    }
+
+    .switch-slider.right {
+        transform: translateX(8rem);
+    }
+
+
 }
