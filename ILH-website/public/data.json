@@ -1,37 +1,37 @@
 [
   {
     "id": 1,
-    "title": "Agriclture",
+    "title": "Agriculture",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, porro quibusdam reiciendis modi sed impedit recusandae in tenetur animi maiores laudantium libero dolore ratione autem. Totam est earum excepturi placeat.",
     "image": "./src/assets/agriculture.png",
-    "link": "/about-us"
+    "link": "/single-business/agriculture"
   },
   {
     "id": 2,
     "title": "Advisory",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, porro quibusdam reiciendis modi sed impedit recusandae in tenetur animi maiores laudantium libero dolore ratione autem. Totam est earum excepturi placeat.",
     "image": "./src/assets/advisory.png",
-    "link": "/about-us"
+    "link": "/single-business/advisory"
   },
   {
     "id": 3,
     "title": "Finance",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, porro quibusdam reiciendis modi sed impedit recusandae in tenetur animi maiores laudantium libero dolore ratione autem. Totam est earum excepturi placeat.",
     "image": "./src/assets/finance.png",
-    "link": "/about-us"
+    "link": "/single-business/finance"
   },
   {
     "id": 4,
     "title": "Food Processing",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, porro quibusdam reiciendis modi sed impedit recusandae in tenetur animi maiores laudantium libero dolore ratione autem. Totam est earum excepturi placeat.",
     "image": "./src/assets/foodprocessing.png",
-    "link": "/about-us"
+    "link": "/single-business/food-processing"
   },
   {
     "id": 5,
     "title": "Warehousing",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, porro quibusdam reiciendis modi sed impedit recusandae in tenetur animi maiores laudantium libero dolore ratione autem. Totam est earum excepturi placeat.",
     "image": "./src/assets/warehousing.png",
-    "link": "/about-us"
+    "link": "/single-business/warehousing"
   }
 ]
