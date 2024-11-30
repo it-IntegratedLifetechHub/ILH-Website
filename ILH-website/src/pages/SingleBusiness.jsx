@@ -39,7 +39,7 @@ const SingleBusiness = () => {
       {/* Header Image */}
       <div className="image-section">
         <img
-          src={business.image.replace(".", "")} // Correct path adjustment for public folder
+          src={business.image.replace(".", "")} 
           alt={business.title}
           className="header-image"
         />

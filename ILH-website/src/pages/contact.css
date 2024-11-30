@@ -90,7 +90,7 @@
     /* Ensures 2 columns on larger screens */
 }
 
-button {
+.contact-page-button {
     margin-top: 15px;
     padding: 12px 20px;
     background-color: #3f5c08;
@@ -101,7 +101,7 @@ button {
     align-self: start;
 }
 
-button:hover {
+.contact-page-button:hover {
     background-color: #223004;
 }
 
@@ -151,7 +151,7 @@ button:hover {
         /* Adds spacing between stacked fields */
     }
 
-    button {
+    .contact-page-button {
         width: 100%;
         align-self: center;
     }

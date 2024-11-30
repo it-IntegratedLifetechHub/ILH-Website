@@ -10,6 +10,7 @@ const ResponsiveNavbar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   // Toggle menu visibility
   const handleToggleMenu = () => {
@@ -21,16 +22,23 @@ const ResponsiveNavbar = () => {
     setMenuVisible(false);
   };
 
-  // Scroll handler to show/hide header
+  // Update scroll progress and toggle header visibility
   const handleScroll = () => {
-    if (window.scrollY > lastScrollY) {
+    const scrollY = window.scrollY;
+    const documentHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPercentage = (scrollY / documentHeight) * 100;
+
+    setScrollProgress(scrollPercentage);
+
+    if (scrollY > lastScrollY) {
       // Scrolling down
       setShowHeader(false);
     } else {
       // Scrolling up
       setShowHeader(true);
     }
-    setLastScrollY(window.scrollY);
+
+    setLastScrollY(scrollY);
   };
 
   useEffect(() => {
@@ -41,104 +49,122 @@ const ResponsiveNavbar = () => {
   }, [lastScrollY]);
 
   return (
-    <header className={`header ${showHeader ? "show" : "hide"}`} id="header">
-      <nav className="nav container">
-        <img className="nav__logo" src={logo} alt="Logo" />
+    <>
+      <header className={`header ${showHeader ? "show" : "hide"}`} id="header">
+        <nav className="nav container">
+          <img className="nav__logo" src={logo} alt="Logo" />
 
-        <div
-          className={`nav__menu ${menuVisible ? "show-menu" : ""}`}
-          id="nav-menu"
-        >
-          <ul className="nav__list">
-            <li className="nav__item">
-              <Link
-                smooth
-                to="/"
-                className="nav__link"
-                onClick={handleCloseMenu}
+          <div
+            className={`nav__menu ${menuVisible ? "show-menu" : ""}`}
+            id="nav-menu"
+          >
+            <ul className="nav__list">
+              <li className="nav__item">
+                <Link
+                  smooth
+                  to="/"
+                  className="nav__link"
+                  onClick={handleCloseMenu}
+                >
+                  <RiArrowRightUpLine />
+                  <span>Home</span>
+                </Link>
+              </li>
+
+              <li className="nav__item">
+                <Link
+                  smooth
+                  to="/about-us"
+                  className="nav__link"
+                  onClick={handleCloseMenu}
+                >
+                  <RiArrowRightUpLine />
+                  <span>About Us</span>
+                </Link>
+              </li>
+
+              <li className="nav__item">
+                <Link
+                  smooth
+                  to="/our-division"
+                  className="nav__link"
+                  onClick={handleCloseMenu}
+                >
+                  <RiArrowRightUpLine />
+                  <span>Our Divisions</span>
+                </Link>
+              </li>
+
+              <li className="nav__item">
+                <Link
+                  smooth
+                  to="/contact"
+                  className="nav__link"
+                  onClick={handleCloseMenu}
+                >
+                  <RiArrowRightUpLine />
+                  <span>Contact</span>
+                </Link>
+              </li>
+            </ul>
+
+            {/* Close button */}
+            <div
+              className="nav__close"
+              id="nav-close"
+              onClick={handleCloseMenu}
+            >
+              <RiCloseLine />
+            </div>
+
+            <div className="nav__social">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                className="nav__social-link"
+                rel="noreferrer"
               >
-                <RiArrowRightUpLine />
-                <span>Home</span>
-              </Link>
-            </li>
+                <RiInstagramFill />
+              </a>
 
-            <li className="nav__item">
-              <Link
-                smooth
-                to="/about-us"
-                className="nav__link"
-                onClick={handleCloseMenu}
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                className="nav__social-link"
+                rel="noreferrer"
               >
-                <RiArrowRightUpLine />
-                <span>About Us</span>
-              </Link>
-            </li>
-
-            <li className="nav__item">
-              <Link
-                smooth
-                to="/our-division"
-                className="nav__link"
-                onClick={handleCloseMenu}
+                <FaLinkedin />
+              </a>
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                className="nav__social-link"
+                rel="noreferrer"
               >
-                <RiArrowRightUpLine />
-                <span>Our Divisions</span>
-              </Link>
-            </li>
-
-            <li className="nav__item">
-              <Link
-                smooth
-                to="/contact"
-                className="nav__link"
-                onClick={handleCloseMenu}
-              >
-                <RiArrowRightUpLine />
-                <span>Contact</span>
-              </Link>
-            </li>
-          </ul>
-
-          {/* Close button */}
-          <div className="nav__close" id="nav-close" onClick={handleCloseMenu}>
-            <RiCloseLine />
+                <FaFacebookSquare />
+              </a>
+            </div>
           </div>
 
-          <div className="nav__social">
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              className="nav__social-link"
-              rel="noreferrer"
-            >
-              <RiInstagramFill />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/"
-              target="_blank"
-              className="nav__social-link"
-              rel="noreferrer"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://www.linkedin.com/"
-              target="_blank"
-              className="nav__social-link"
-              rel="noreferrer"
-            >
-              <FaFacebookSquare />
-            </a>
+          {/* Toggle button */}
+          <div
+            className="nav__toggle"
+            id="nav-toggle"
+            onClick={handleToggleMenu}
+          >
+            <RiMenuLine />
           </div>
-        </div>
+        </nav>
 
-        {/* Toggle button */}
-        <div className="nav__toggle" id="nav-toggle" onClick={handleToggleMenu}>
-          <RiMenuLine />
+        {/* Scroll Progress Bar */}
+        <div className="scroll-progress">
+          <div
+            className="scroll-progress__bar"
+            style={{ width: `${scrollProgress}%` }}
+          ></div>
         </div>
-      </nav>
-    </header>
+      </header>
+    </>
   );
 };
 
