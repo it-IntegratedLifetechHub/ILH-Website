@@ -988,7 +988,7 @@ a {
   top: 1;
   left: 0;
   width: 100%;
-  height: 5px;
+  height: 3px;
   z-index: 999;
 }
 
@@ -996,4 +996,68 @@ a {
   height: 100%;
   background-color: #491f1a;
   transition: width 0.2s ease;
+}
+
+/* Initial state: hidden */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* When visible: show with animation */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation for the divider pulse effect */
+@keyframes pulseDivider {
+
+  0%,
+  100% {
+    transform: scaleX(1);
+    /* Normal size */
+  }
+
+  50% {
+    transform: scaleX(1.5);
+    /* Pulse effect */
+  }
+}
+
+/* Animation for title sliding in from the left */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animation for subtitle fade-in from the bottom */
+@keyframes fadeInFromBottom {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Apply animation to the title (slide from left) */
+.hero-title {
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+/* Apply animation to the subtitle (fade-in from bottom) */
+.hero-subtitle {
+  animation: fadeInFromBottom 1s ease-out forwards;
 }

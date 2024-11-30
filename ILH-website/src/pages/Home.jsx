@@ -22,9 +22,7 @@ const Home = () => {
 
           <p className="hero-subtitle">Bhu-Samriddhi, Jeevan-Unnati</p>
 
-          <div className="hero-image">
-            {/* Background image styled via CSS */}
-          </div>
+          <div className="hero-image"></div>
         </div>
       </div>
 
