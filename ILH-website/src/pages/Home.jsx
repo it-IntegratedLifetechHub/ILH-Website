@@ -63,16 +63,38 @@ const Home = () => {
           <span className="bottom-dot">•••</span>
           <div className="business-cards">
             {[
-              { title: "Agriculture", imgSrc: agriculture },
-              { title: "Advisory", imgSrc: advisory },
-              { title: "Finance", imgSrc: finance },
-              { title: "Food Processing", imgSrc: food },
-              { title: "Warehousing", imgSrc: warehousing },
+              {
+                title: "Agriculture",
+                imgSrc: agriculture,
+                link: "agriculture",
+              },
+              {
+                title: "Advisory",
+                imgSrc: advisory,
+                link: "advisory",
+              },
+              {
+                title: "Finance",
+                imgSrc: finance,
+                link: "finance",
+              },
+              {
+                title: "Food Processing",
+                imgSrc: food,
+                link: "food-processing",
+              },
+              {
+                title: "Warehousing",
+                imgSrc: warehousing,
+                link: "warehousing",
+              },
             ].map((card, index) => (
-              <div className="bcard" key={index}>
-                <h1>{card.title}</h1>
-                <img src={card.imgSrc} alt={card.title} />
-              </div>
+              <Link to={`/single-business/${card.link}`} key={index}>
+                <div className="bcard">
+                  <h1>{card.title}</h1>
+                  <img src={card.imgSrc} alt={card.title} />
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -97,7 +119,7 @@ const Home = () => {
 
       <div className="tagline">
         <h1>
-          <span className="highlight-brown">Bhu-Samriddhi</span>,{" "}
+          <span className="highlight-brown">Bhu-Samriddhi</span>,
           <span className="highlight-green">Jeevan-Unnati</span>
         </h1>
         <h2>Brown Revolution</h2>

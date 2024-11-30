@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
+import LoadingPage from "./components/LoadingPages";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -11,11 +12,42 @@ import Business from "./pages/Business";
 import Contact from "./pages/Contact";
 import SingleBusiness from "./pages/SingleBusiness";
 import ScrollToTop from "./components/ScrollToTop";
+
 const App = () => {
   const [progress, setProgress] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   return (
     <BrowserRouter>
+      <MainApp
+        loading={loading}
+        setLoading={setLoading}
+        progress={progress}
+        setProgress={setProgress}
+      />
+    </BrowserRouter>
+  );
+};
+
+// The component wrapped inside <BrowserRouter>
+const MainApp = ({ loading, setLoading, progress, setProgress }) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Trigger loading on route change
+    setLoading(true);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Simulate loading for 2 seconds
+    return () => clearTimeout(timer); // Cleanup the timer on component unmount
+  }, [location, setLoading]);
+
+  if (loading) {
+    return <LoadingPage />;
+  }
+
+  return (
+    <div>
       {/* Loading Bar */}
       <LoadingBar
         color="#ca0000"
@@ -46,7 +78,8 @@ const App = () => {
 
       {/* Footer */}
       <Footer />
-    </BrowserRouter>
+    </div>
   );
 };
+
 export default App;
