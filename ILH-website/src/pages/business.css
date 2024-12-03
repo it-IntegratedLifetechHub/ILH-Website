@@ -95,7 +95,6 @@
     align-items: center;
     gap: 30px;
     width: 100%;
-    padding: 20px;
     box-sizing: border-box;
 }
 
@@ -129,7 +128,7 @@
 }
 
 /* Image styling */
-.about-image {
+.business-image {
     max-width: 45%;
     height: auto;
     border-radius: 15px;
@@ -138,7 +137,7 @@
 }
 
 /* Image hover effect */
-.about-image:hover {
+.business-image:hover {
     transform: scale(1.05);
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
 }
@@ -205,8 +204,8 @@
         gap: 20px;
     }
 
-    .about-image {
-        max-width: 90%;
+    .business-image {
+        max-width: 100%;
         margin-bottom: 20px;
     }
 

@@ -46,7 +46,7 @@ const Business = () => {
               <img
                 src={section.image}
                 alt={`${section.title} Image`}
-                className="about-image"
+                className="business-image"
               />
               <div className="text-content">
                 <h1 className="about-title">{section.title}</h1>
