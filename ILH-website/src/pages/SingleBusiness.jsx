@@ -39,7 +39,7 @@ const SingleBusiness = () => {
       {/* Header Image */}
       <div className="image-section">
         <img
-          src={business.image.replace(".", "")} 
+          src={business.image} 
           alt={business.title}
           className="header-image"
         />
