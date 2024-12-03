@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Agriculture",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, porro quibusdam reiciendis modi sed impedit recusandae in tenetur animi maiores laudantium libero dolore ratione autem. Totam est earum excepturi placeat.",
-    "image": "../src/assets/agriculture.png",
+    "image": "/src/assets/agriculture.png",
     "link": "/single-business/agriculture"
   },
   {
