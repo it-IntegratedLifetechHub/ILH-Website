@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import aboutus from "../assets/aboutus.png";
 import agriculture from "../assets/business1.png";
@@ -8,9 +9,35 @@ import food from "../assets/business4.png";
 import warehousing from "../assets/business5.png";
 
 const Home = () => {
+  // Intersection Observer to detect visibility
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible"); // Add the visible class for animation
+          } else {
+            entry.target.classList.remove("visible"); // Remove the visible class if no longer visible
+          }
+        });
+      },
+      { threshold: 0.1 } // Trigger when 10% of the element is visible
+    );
+
+    // Select all elements with animation classes
+    const animatedElements = document.querySelectorAll(
+      ".fade-in, .fade-in-scale, .slide-in-left, .slide-in-right, .zoom-in, .rotate-in, .slide-in-bounce, .fade-in-color, .scale-rotate, .swing-in"
+    );
+
+    animatedElements.forEach((element) => observer.observe(element));
+
+    return () => {
+      animatedElements.forEach((element) => observer.unobserve(element));
+    };
+  }, []);
   return (
     <>
-      <div className="homepage" id="home">
+      <div className="homepage zoom-in" id="home">
         <div className="hero-content">
           <h1 className="hero-title">
             Integrated <br />
@@ -28,8 +55,12 @@ const Home = () => {
 
       <div className="about-section">
         <div className="bgbox">
-          <img src={aboutus} alt="About Us Image" className="about-image" />
-          <div className="text-content">
+          <img
+            src={aboutus}
+            alt="About Us Image"
+            className="about-image slide-in-left"
+          />
+          <div className="text-content slide-in-right">
             <h1 className="about-title">Introduction</h1>
             <p className="about-description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,
@@ -54,12 +85,14 @@ const Home = () => {
 
       <div className="business-section">
         <div className="business-bgbox">
-          <h1 className="business-subtitle">
-            Integrated Lifetech Hub India Pvt. Ltd.
-          </h1>
-          <h1 className="business-title">Our Division</h1>
-          <span className="bottom-dot">•••</span>
-          <div className="business-cards">
+          <div className="business-content fade-in-color">
+            <h1 className="business-subtitle">
+              Integrated Lifetech Hub India Pvt. Ltd.
+            </h1>
+            <h1 className="business-title">Our Division</h1>
+            <span className="bottom-dot">•••</span>
+          </div>
+          <div className="business-cards zoom-in">
             {[
               {
                 title: "Agriculture",
