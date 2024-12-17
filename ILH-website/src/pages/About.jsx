@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import "./about.css";
 import Tagline from "../assets/Tagline.png";
 
@@ -9,11 +10,42 @@ const About = () => {
     setActiveTab((prevTab) => (prevTab === "vision" ? "mission" : "vision"));
   };
 
+  // Intersection Observer to detect visibility
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible"); // Add the visible class for animation
+          } else {
+            entry.target.classList.remove("visible"); // Remove the visible class if no longer visible
+          }
+        });
+      },
+      { threshold: 0.1 } // Trigger when 10% of the element is visible
+    );
+
+    // Select all elements with animation classes
+    const animatedElements = document.querySelectorAll(
+      ".fade-in, .fade-in-scale, .slide-in-left, .zoom-in, .rotate-in, .slide-in-bounce, .fade-in-color, .scale-rotate, .swing-in"
+    );
+
+    animatedElements.forEach((element) => observer.observe(element));
+
+    return () => {
+      animatedElements.forEach((element) => observer.unobserve(element));
+    };
+  }, []);
+
   return (
     <>
       <div className="about-page">
-        <img src={Tagline} alt="Company Tagline" className="tagline-img" />
-        <div className="about-text">
+        <img
+          src={Tagline}
+          alt="Company Tagline"
+          className="tagline-img slide-in-left"
+        />
+        <div className="about-text zoom-in">
           <p className="about-page-title">About Us</p>
           <p className="about-page-description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum modi
@@ -23,7 +55,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="vision-mission-container">
+      <div className="vision-mission-container zoom-in">
         {/* Toggle Switch */}
         <div className="switch-container">
           <div className="switch" onClick={handleToggle}>

@@ -198,3 +198,151 @@
 
 
 }
+
+
+/* Initial state: hidden */
+.fade-in {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  /* When visible: show with animation */
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  
+  /* Initial state: hidden */
+  .fade-in-scale {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  /* When visible: show with animation */
+  .fade-in-scale.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  
+  
+  /* Initial state: hidden */
+  .swing-in {
+    opacity: 0;
+    transform: rotateY(-90deg);
+    transform-origin: left;
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+  
+  /* When visible: show with animation */
+  .swing-in.visible {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  
+  
+  /* Initial state: hidden */
+  .slide-in-delay {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out 0.3s, transform 0.5s ease-out 0.3s;
+    /* Add delay */
+  }
+  
+  /* When visible: show with animation */
+  .slide-in-delay.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  
+  
+  /* Initial state: hidden */
+  .scale-rotate {
+    opacity: 0;
+    transform: scale(0.8) rotate(-10deg);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+  
+  /* When visible: show with animation */
+  .scale-rotate.visible {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  
+  
+  /* Initial state: hidden */
+  .fade-in-color {
+    opacity: 0;
+    transform: translateY(50px);
+    color: #aaa;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, color 0.6s ease-out;
+  }
+  
+  /* When visible: show with animation */
+  .fade-in-color.visible {
+    opacity: 1;
+    transform: translateY(0);
+    color: #333;
+  }
+  
+  
+  
+  /* Initial state: hidden */
+  .slide-in-bounce {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  }
+  
+  /* When visible: show with animation */
+  .slide-in-bounce.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  
+  /* Initial state: hidden */
+  .rotate-in {
+    opacity: 0;
+    transform: rotate(-15deg);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  /* When visible: show with animation */
+  .rotate-in.visible {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  
+  
+  
+  /* Initial state: hidden */
+  .zoom-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  /* When visible: show with animation */
+  .zoom-in.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  
+  
+  /* Initial state: hidden */
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  /* When visible: show with animation */
+  .slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }

@@ -1,11 +1,38 @@
 import React from "react";
+import { useEffect } from "react";
 import "./contact.css";
 
 const Contact = () => {
+  // Intersection Observer to detect visibility
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible"); // Add the visible class for animation
+          } else {
+            entry.target.classList.remove("visible"); // Remove the visible class if no longer visible
+          }
+        });
+      },
+      { threshold: 0.1 } // Trigger when 10% of the element is visible
+    );
+
+    // Select all elements with animation classes
+    const animatedElements = document.querySelectorAll(
+      ".fade-in, .fade-in-scale, .slide-in-left, .zoom-in, .rotate-in, .slide-in-bounce, .fade-in-color, .scale-rotate, .swing-in"
+    );
+
+    animatedElements.forEach((element) => observer.observe(element));
+
+    return () => {
+      animatedElements.forEach((element) => observer.unobserve(element));
+    };
+  }, []);
   return (
     <div className="contact-page">
       <div className="contact-us">
-        <div className="contact-form-section">
+        <div className="contact-form-section slide-in-left">
           <h4>Any Query?</h4>
           <h2>
             <span>Get In Touch With Us</span>
@@ -45,10 +72,12 @@ const Contact = () => {
                 />
               </div>
             </div>
-            <button className="contact-page-button" type="submit">Submit</button>
+            <button className="contact-page-button" type="submit">
+              Submit
+            </button>
           </form>
         </div>
-        <div className="contact-info-section">
+        <div className="contact-info-section zoom-in">
           <iframe
             src="https://maps.google.com/maps?q=M.K.%20Hydraulics,%20Andheri%20East,%20Mumbai&t=&z=15&ie=UTF8&iwloc=&output=embed"
             title="Google Map"

@@ -26,7 +26,7 @@ const Home = () => {
 
     // Select all elements with animation classes
     const animatedElements = document.querySelectorAll(
-      ".fade-in, .fade-in-scale, .slide-in-left, .slide-in-right, .zoom-in, .rotate-in, .slide-in-bounce, .fade-in-color, .scale-rotate, .swing-in"
+      ".fade-in, .fade-in-scale, .slide-in-left, .zoom-in, .rotate-in, .slide-in-bounce, .fade-in-color, .scale-rotate, .swing-in"
     );
 
     animatedElements.forEach((element) => observer.observe(element));
@@ -60,7 +60,7 @@ const Home = () => {
             alt="About Us Image"
             className="about-image slide-in-left"
           />
-          <div className="text-content slide-in-right">
+          <div className="text-content zoom-in">
             <h1 className="about-title">Introduction</h1>
             <p className="about-description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,

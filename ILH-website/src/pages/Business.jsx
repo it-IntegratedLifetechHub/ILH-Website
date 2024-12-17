@@ -18,15 +18,42 @@ const Business = () => {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
+  // Intersection Observer to detect visibility
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible"); // Add the visible class for animation
+          } else {
+            entry.target.classList.remove("visible"); // Remove the visible class if no longer visible
+          }
+        });
+      },
+      { threshold: 0.1 } // Trigger when 10% of the element is visible
+    );
+
+    // Select all elements with animation classes
+    const animatedElements = document.querySelectorAll(
+      ".fade-in, .fade-in-scale, .slide-in-left, .zoom-in, .rotate-in, .slide-in-bounce, .fade-in-color, .scale-rotate, .swing-in"
+    );
+
+    animatedElements.forEach((element) => observer.observe(element));
+
+    return () => {
+      animatedElements.forEach((element) => observer.unobserve(element));
+    };
+  }, []);
+
   return (
     <>
       <div className="business-page">
         <img
           src={allbusiness}
           alt="Our Business Overview"
-          className="ourbusiness-img"
+          className="ourbusiness-img slide-in-left"
         />
-        <div className="business-text">
+        <div className="business-text zoom-in">
           <h1 className="business-page-title">Our Business</h1>
           <p className="business-page-description">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum modi
