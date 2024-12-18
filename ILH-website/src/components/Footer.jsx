@@ -119,7 +119,7 @@ function Footer() {
 
             <div className="footer-map">
               <iframe
-                src="https://www.google.com/maps/embed?pb=..."
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4118.397708933418!2d72.86370788274873!3d19.112913304675434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8395823ec0d%3A0x5207f8aa721e8c91!2sSahar%20Plaza%20Midas%20II%2C%20Andheri%20-%20Kurla%20Rd%2C%20Bhim%20Nagar%2C%20Andheri%20East%2C%20Mumbai%2C%20Maharashtra%20400053!5e1!3m2!1sen!2sin!4v1734510694998!5m2!1sen!2sin"
                 width="100%"
                 height="200"
                 style={{ border: 0, borderRadius: "10px" }}
